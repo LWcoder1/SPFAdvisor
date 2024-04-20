@@ -4,5 +4,12 @@
 {% endblock %}
 
 {% block body %}
-    {{possibleOffenderList}}
+    <div class="harmfulIngredientsContainer">
+        <div class="ingredientsDiv">
+            <h1>Harmful Ingredients In Your Sunscreen</h1>
+            {% for key, value in possibleOffenderList.items() %}
+                <span><li>{{ key }}</li> - {{ value }}</span>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
