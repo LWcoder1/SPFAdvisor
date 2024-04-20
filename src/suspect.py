@@ -2,15 +2,31 @@ class suspectedIngredient:
 
     def __init__(self):
         self.possibleOffenders = [
-            "Oxybenzone",
-            "Avobenzone",
+            "Benzophenone"
+            "Benzophenone-2",
+            "Benzophenone-3",
+            "Benzophenone-4",
             "Octinoxate",
+            "Oxybenzone",
             "Homosalate",
+            "Avobenzone",
             "Octocrylene",
-            "Para-aminobenzoic acid",
-            "Isopropyl Myristate",
             "Fragrance",
-            "Alcohol"
+            "Retinyl palmitate",
+            "Octyl methoxycinnamate",
+            "Nano Zinc oxide",
+            "Butyloctyl Salicylate",
+            "Cylcopentasiloxane / Cyclomethicone",
+            "Formaldehyde",
+            "Diazolidinyl urea",
+            "DMDM Hydantoin",
+            "Hydroxymethylglycinate",
+            "Methylisothiazolinone",
+            "Sodium lauryl sulfate",
+            "Sodium laureth sulfate",
+            "Retinyl Palmitate",
+            "Quaternium-15"
+
         ]
 
     def matchPotentialOffenders(self, comparedList):
