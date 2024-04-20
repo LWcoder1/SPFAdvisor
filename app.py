@@ -46,8 +46,19 @@ def uploadImage():
     else:
         file_url = None
         filename = None
-    return render_template("form.html", form=form, file_url=file_url,
-                           filename=imageScanner.pyScan(f"uploads/{filename}"))
+
+    # return render_template("form.html", form=form, file_url=file_url,
+    #                        filename=imageScanner.pyScan(f"uploads/{filename}"))
+
+    apple = imageScanner.pyScan(f"uploads/{filename}")
+    if apple is not None:
+        return render_template("results.html", possibleOffenderList=susIngredients.matchPotentialOffenders(apple))
+    else:
+        return render_template("form.html", form=form, file_url=file_url)
+    #
+
+# ['Active Ingredients Purpose Avobenzone 2.5%', 'octocrylene 8.0%', 'oxybenzone 3.5% Sunscreen Inactive Ingredients: Water', 'aluminum starch octenylsuccinate', 'styrene/ pagans epard g eolagerw tarran agemenare ary ane', 'arachidy! beeswax', 'ethythexyiglycerin', 'neopenty! glycol dihep- tanoate', 'acrylates/C10-30 alkyl acrylate crosspolymer', 'behenyl alcohol', 'to- caer (ten gen iy sven Fb so assium hydraxide', 'disodium EDTA', 'sodium ascorbyl phosphate', 'fragrance']
+
 
 @app.route("/addItem", methods=['GET', 'POST'])
 def addItem():
@@ -58,6 +69,7 @@ def addItem():
 
     return render_template("results.html",
                            possibleOffenderList=susIngred)
+
 
 @app.route("/textUpload", methods=['GET', 'POST'])
 def textUpload():
@@ -72,7 +84,6 @@ def info():
 @app.route("/about")
 def about():
     return render_template("about.html")
-
 
 
 # @app.route('/planner', methods=['GET', 'POST'])
