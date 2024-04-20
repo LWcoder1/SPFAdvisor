@@ -4,6 +4,7 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from wtforms import SubmitField
 from src.scanner import Scanner
+from src.suspect import suspectedIngredient
 import os
 
 app = Flask(__name__)
@@ -13,6 +14,7 @@ app.config["UPLOADED_PHOTOS_DEST"] = 'uploads'
 photos = UploadSet('photos', IMAGES)
 configure_uploads(app, photos)
 imageScanner = Scanner()
+susIngredients = suspectedIngredient()
 
 
 class UploadForm(FlaskForm):
@@ -47,6 +49,20 @@ def uploadImage():
     return render_template("form.html", form=form, file_url=file_url,
                            filename=imageScanner.pyScan(f"uploads/{filename}"))
 
+@app.route("/addItem", methods=['GET', 'POST'])
+def addItem():
+    if request.method == "POST":
+        currItems = request.form['addText']
+        offenderList = imageScanner.textAreaScan(currItems)
+        susIngred = susIngredients.matchPotentialOffenders(offenderList)
+
+    return render_template("results.html",
+                           possibleOffenderList=susIngred)
+
+@app.route("/textUpload", methods=['GET', 'POST'])
+def textUpload():
+    return render_template("textUpload.html")
+
 
 @app.route("/info")
 def info():
@@ -56,6 +72,7 @@ def info():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
 
 
 # @app.route('/planner', methods=['GET', 'POST'])

@@ -10,7 +10,8 @@ pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 class Scanner():
 
     def __init__(self):
-        self.allPhotos = []
+        pass
+        # self.allPhotos = []
 
     def pyScan(self, file):
         if file == "uploads/None":
@@ -18,8 +19,10 @@ class Scanner():
         image = Image.open(file)
         text = pytesseract.image_to_string(image)
         ingredientList = [value.strip().replace("\n", " ") for value in text.split(",")]
-        self.allPhotos.append(ingredientList)
+        return ingredientList
+        # self.allPhotos.append(ingredientList)
 
     def textAreaScan(self, data):
         ingredientList = [value.strip().replace("\n", " ") for value in data.split(",")]
-        self.allPhotos.append(ingredientList)
+        return ingredientList
+        # self.allPhotos.append(ingredientList)

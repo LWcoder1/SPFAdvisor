@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+<div class="formWrapper">
+    <div class="uploadDiv">
+        <div class="mainUploadDiv">
+
+            <form method="POST" action="/addItem">
+                <label for="addText" id="addText">Add text area</label>
+                <input type="text" name="addText">
+                <button>Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
