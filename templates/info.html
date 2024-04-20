@@ -1,5 +1,169 @@
 {% extends 'base.html' %}
-
 {% block head %}{% endblock %}
+{% block body %}
 
-{% block body %}{% endblock %}
+<style>
+.collapsible {
+  background: rgba(204, 204, 204, 0);
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background: rgba(204, 204, 204, 0);
+}
+
+.CTA button{
+    text-align: center;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background: rgba(204, 204, 204, 0)
+}
+</style>
+</head>
+<body>
+
+<div class="parallax-section1">
+        <div class="CTAwrapper">
+            <div class="CTA">
+                <h1 class="CTAHEAD">Common Sunscreen Ingredients</h1>
+                <button class="collapsible">Avobenzone</button>
+                    <div class="content">
+                    <p>Avobenzone is a common active ingredient that only lasts for about 30 minutes and can cause skin irritation, such as rashes and acne.</p>
+            </div>
+                <button class="collapsible">Benzophenone-2 (Click to learn more)</button>
+                    <div class="content">
+                    <p> Benzophenone-2 can cause skin irritation, allergic reactions, and sensitization, particularly in individuals with sensitive skin or allergies to similar compounds. It may also have estrogenic effects, potentially disrupting hormone balance in the body.</p>
+            </div>
+                <button class="collapsible">Benzophenone-3</button>
+                    <div class="content">
+                    <p>Benzophenone-3 is known to be an endocrine disruptor, it can cause allergic reactions and may have harmful effects on marine ecosystems when washed off into water bodies. Prolonged or repeated exposure may lead to skin irritation and other adverse effects.</p>
+            </div>
+
+                <button class="collapsible">Butyloctyl Salicylate</button>
+                    <div class="content">
+                    <p>Butyloctyl Salicylate may cause irritation or allergic reactions in sensitive individuals, particularly those with salicylate allergies.
+            </p>
+            </div>
+                <button class="collapsible">Cylcopentasiloxane / Cyclomethicone</button>
+                    <div class="content">
+                    <p>Cylcopentasiloxane / Cyclomethicone can potentially clog pores and exacerbate acne in some individuals, especially if used in high concentrations or on oily skin types.</p>
+            </div>
+                <button class="collapsible">Diazolidinyl urea</button>
+                    <div class="content">
+                    <p>Diazolidinyl urea can cause skin irritation, allergic reactions, and sensitization in some individuals, and it releases formaldehyde, which is associated with potential health risks such as carcinogenicity.</p>
+            </div>
+                <button class="collapsible">DMDM Hydantoin</button>
+                    <div class="content">
+                    <p>DMDM Hydantoin releases formaldehyde, which can cause skin irritation, allergic reactions, and sensitization, especially in individuals with formaldehyde allergies or sensitivities.</p>
+            </div>
+                <button class="collapsible">Fragrance</button>
+                    <div class="content">
+                    <p>Fragrance can cause skin irritation, allergic reactions, and increased sensitivity to sunlight. These can appear as redness, itching, burning sensations, or more severe reactions such as hives or dermatitis. It may also mask the chemical odors in sunscreen, which could potentially interfere with users' ability to detect changes in the product's efficacy. </p>
+            </div>
+                <!--FIXME: text is centered for some reason when it needs to be left allgined-->
+                <button class="collapsible">Retinyl palmitate</button>
+                    <div class="content">
+                    <p>Increases skin sensitivity to sunlight, potentially leading to sunburn and skin damage.</p>
+            </div>
+                <button class="collapsible">Octyl Methoxycinnamate</button>
+                    <div class="content">
+                    <p>Endocrine Disruption: Increases cell proliferation in cells that grow in response to estrogen exposure) Additionally, long exposure can cause breast cancer. </p>
+            </div>
+                <button class="collapsible">Nano Zinc Oxide</button>
+                    <div class="content">
+                    <p>Can cause skin irritation or allergic reactions in some individuals, especially if used in high concentrations or if not properly formulated. </p>
+            </div>
+                <!--FIXME: text is centered for some reason when it needs to be left allgined-->
+                <button class="collapsible">Butyloctyl Salicylate</button>
+                    <div class="content">
+                    <p>May cause irritation or allergic reactions in sensitive individuals, particularly those with salicylate allergies.</p>
+            </div>
+                <button class="collapsible">Cylcopentasiloxane / Cyclomethicone</button>
+                    <div class="content">
+                    <p>Can potentially clog pores and exacerbate acne in some individuals, especially if used in high concentrations or on oily skin types.</p>
+            </div>
+                <button class="collapsible">Formaldehyde Type: Diazolidinyl Urea</button>
+                    <div class="content">
+                    <p>Can cause skin irritation, allergic reactions, and sensitization in some individuals, and it releases formaldehyde, which is associated with potential health risks such as carcinogenicity.</p>
+            </div>
+                <button class="collapsible">Formaldehyde Type: Quaternium-15</button>
+                    <div class="content">
+                    <p>Known to release formaldehyde, it can cause skin irritation, allergic reactions, and sensitization, particularly in individuals with formaldehyde allergies or sensitivities.</p>
+            </div>
+                <button class="collapsible">Formaldehyde Type: DMDM Hydantoin</button>
+                    <div class="content">
+                    <p>Releases formaldehyde, which can cause skin irritation, allergic reactions, and sensitization, especially in individuals with formaldehyde allergies or sensitivities.</p>
+            </div>
+                <button class="collapsible">Formaldehyde Type: Hydroxymethylglycinate</button>
+                    <div class="content">
+                    <p>While generally considered a mild preservative, it can cause skin irritation and allergic reactions in some individuals, particularly those with sensitive skin or allergies to similar compounds.</p>
+            </div>
+                <button class="collapsible">Homosalate</button>
+                    <div class="content">
+                    <p>Endocrine Disruption: Increases cell proliferation in cells that grow in response to estrogen exposure). Additionally, long exposure can cause breast cancer.</p>
+            </div>
+                <button class="collapsible">Methylisothiazolinone</button>
+                    <div class="content">
+                    <p>Known to cause allergic reactions, skin irritation, and sensitization in some individuals, particularly when used in high concentrations or on sensitive skin.</p>
+            </div>
+                <button class="collapsible">Sodium lauryl and laureth sulfate (SLS/SLES)</button>
+                    <div class="content">
+                    <p>These surfactants can strip the skin of its natural oils, leading to dryness, irritation, and potential disruption of the skin barrier. They may also cause eye irritation and allergic reactions in some individuals.</p>
+            </div>
+                <button class="collapsible">Retinyl Palmitate</button>
+                    <div class="content">
+                    <p>Can increase the skin's sensitivity to sunlight, potentially leading to sunburn and skin damage, especially when used in daytime products without adequate sun protection.</p>
+            </div>
+                <button class="collapsible">Quaternium-15</button>
+                    <div class="content">
+                    <p>Known to release formaldehyde, it can cause skin irritation, allergic reactions, and sensitization, particularly in individuals with formaldehyde allergies or sensitivities.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+<div class="parallax-section1">
+        <div class="CTAwrapper">
+            <div class="CTA">
+        </div>
+        </div>
+
+    </div>
+    <div class="parallax-section1">
+        <div class="CTAwrapper">
+            <div class="CTA">
+        </div>
+        </div>
+
+    </div>
+{% endblock %}

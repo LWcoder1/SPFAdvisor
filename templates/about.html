@@ -2,4 +2,47 @@
 
 {% block head %}{% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+
+      <div class="parallax-section1">
+
+
+        <div class="CTAwrapper">
+            <div class="CTA">
+            <h1 class="CTAHEAD">Our Mission</h1>
+            <p>Our goal is to create a software that can detect problematic ingredients in sunscreen. We know how important sunscreen is to the prevention of skin cancer and sunburns, so we want to ensure that its benefits are not overshadowed by possible negative effects that may occur from its ingredients.</p>
+
+        </div>
+        </div>
+
+    </div>
+
+
+<div class="parallax-section2">
+
+        <div class="CTAwrapper">
+            <div class="CTA">
+            <h1 class="CTAHEAD">Contact Us</h1>
+            <p> 123-123-1234
+            <br />
+                abc123@gmail.com
+            <br />
+                3675 Market St, Philadelphia, PA 19104
+
+            </p>
+
+
+        </div>
+        </div>
+
+    </div>
+
+  {% if file_url %}
+    <div class="mt-5">
+      <img src="{{ file_url }}" style="width: 400px;">
+    </div>
+  {% endif %}
+
+
+
+{% endblock %}
