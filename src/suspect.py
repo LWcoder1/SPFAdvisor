@@ -14,5 +14,9 @@ class suspectedIngredient:
         ]
 
     def matchPotentialOffenders(self, comparedList):
-        potentialOffenders = [value for value in self.possibleOffenders if value in comparedList]
+        potentialOffenders = []
+        for a in self.possibleOffenders:
+            for b in comparedList:
+                if a in b:
+                    potentialOffenders.append(a)
         return potentialOffenders
