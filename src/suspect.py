@@ -27,6 +27,7 @@ class suspectedIngredient:
             "Cyclomethicone": "Can potentially clog pores and exacerbate acne in some individuals, especially if used in high concentrations or on oily skin types."
         }
 
+    # ADDED COMMENTS
     def matchPotentialOffenders(self, comparedList):
         potentialOffenders = {}
         for item in range(len(comparedList)):
