@@ -71,7 +71,7 @@ p {
     justify-content: center;
 }
 
-.CTA, .suggestions {
+.BTA, .suggestions {
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -81,6 +81,18 @@ p {
     width: 50vw;
     gap: 3vh;
 }
+
+.CTA {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    width: 50vw;
+    gap: 3vh;
+}
+
 
 
 .CTABUTTON {
