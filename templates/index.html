@@ -1,11 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+      <div class="parallax-section1">
+
+
+        <div class="CTAwrapper">
+            <div class="CTA">
+            <h1 class="CTAHEAD">Are you having sunscreen troubles?</h1>
+            <p>Are the many selections of sunscreens overwhelming you? Or are all the sunscreens you're buying breaking you out? Though it can be tricky to find the right sunscreen, it is one of the most beneficial products to maintain your youth. Therefore, finding the best and right sunscreen is a crucial decision. Scan and find the right sunscreen today!</p>
+            <div class="CTABUTTON fingerHover" onclick="window.location.href='/form'">Try our Application!</div>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="info-div introduction">
+        <h1>Welcome to SPFadvisor</h1>
+        <p>Our application offers an analysis tool that helps users pick the best sunscreen for their skin. Utilizing research data and even your input, a tailored set of specific ingredients and products will be offered to you. Experienced sunscreen users can provide their experiences with previous sunscreens to get very precise suggestions. Even if this will be your first sunscreen, we will offer the best products to help you achieve your skin goals. This versatile tool not only offers suggestions but also warns you of harmful ingredients. Categories such as “Environmentally safe”, “Harmful to skin”, and “comedogenic” will help a user understand their products.</p>
+        <p>Sunscreen is one of the most important steps of your skincare routine. It is also the product that is said to fight the most against anti-aging. Not only that, sunscreen is vital in preventing serious health issues such as skin cancer. After seeing the many consequences that could come with not wearing sunscreen, we decided to make all of these features free. We feel that the implications that could occur from not using sunscreen are too much to be locked behind a paywall. Therefore, we hope that you enjoy our application.</p>
+    </div>
+
+    <div class="parallax-section2">
+        <div class="suggestionsWrapper">
+            <div class="suggestions">
+                <h1>Have Questions? Suggestions?</h1>
+                <p>If you have any inquiries, suggestions, and questions, please make sure to check out the About Us page for contact information. As this project is still in early development, we hope that our users will give us suggestions to determine the developmental trajectory of this website. Any feedback on this website would mean the world to us. </p>
+                <div class="CTABUTTON fingerHover" onclick="window.location.href='/about'">About Us</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-div process">
+        <h1 class="howItWorks">How it Works</h1>
+        <div class="processStepsWrapper">
+            <div class="processStep">
+                <h1>Step 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non ipsum nec neque dignissim aliquet. Cras nec nulla elementum, porttitor ipsum id, volutpat lorem. Suspendisse rutrum ligula a justo hendrerit vestibulum. Sed lobortis, mi vitae lobortis tristique, ex sapien finibus dolor, ut pulvinar sem nisl in nibh. Nam rutrum commodo venenatis. Aliquam felis nisi, egestas ac odio eu, efficitur congue ipsum. Ut feugiat ex ac velit imperdiet bibendum. Praesent aliquet cursus nulla, vel rhoncus nunc volutpat tempor. In dignissim pretium urna, eget sodales ante pellentesque quis.</p>
+                <h1>Scan your documents</h1>
+            </div>
+            <div class="processStep">
+                <h1>Step 2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non ipsum nec neque dignissim aliquet. Cras nec nulla elementum, porttitor ipsum id, volutpat lorem. Suspendisse rutrum ligula a justo hendrerit vestibulum. Sed lobortis, mi vitae lobortis tristique, ex sapien finibus dolor, ut pulvinar sem nisl in nibh. Nam rutrum commodo venenatis. Aliquam felis nisi, egestas ac odio eu, efficitur congue ipsum. Ut feugiat ex ac velit imperdiet bibendum. Praesent aliquet cursus nulla, vel rhoncus nunc volutpat tempor. In dignissim pretium urna, eget sodales ante pellentesque quis.</p>
+                <h1>Computer analysis</h1>
+            </div>
+            <div class="processStep">
+                <h1>Step 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non ipsum nec neque dignissim aliquet. Cras nec nulla elementum, porttitor ipsum id, volutpat lorem. Suspendisse rutrum ligula a justo hendrerit vestibulum. Sed lobortis, mi vitae lobortis tristique, ex sapien finibus dolor, ut pulvinar sem nisl in nibh. Nam rutrum commodo venenatis. Aliquam felis nisi, egestas ac odio eu, efficitur congue ipsum. Ut feugiat ex ac velit imperdiet bibendum. Praesent aliquet cursus nulla, vel rhoncus nunc volutpat tempor. In dignissim pretium urna, eget sodales ante pellentesque quis.</p>
+                <h1>View your results</h1>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="parallax-section3">
+        <div></div>
+    </div>
+
+  {% if file_url %}
+    <div class="mt-5">
+      <img src="{{ file_url }}" style="width: 400px;">
+    </div>
+  {% endif %}
+
+
+
+{% endblock %}

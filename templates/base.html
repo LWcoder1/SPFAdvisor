@@ -1,10 +1,33 @@
+<!--Todays task will be converting the top bar into a transparent bar in the top -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <div class="parallax-section0">
+
+      <div class="header">
+
+        <div class="logoDiv">
+          <img src="/static/uploads/SPFadvisorLogo.png" class="logo fingerHover" onclick="window.location.href='/'"\>
+          <p class="title fingerHover" onclick="window.location.href='/'">SPFadvisor</p>
+        </div>
+
+        <ul class="navBar">
+          <li class="fingerHover" onclick="window.location.href='/'">Home</li>
+          <li class="fingerHover" onclick="window.location.href='/form'">Upload</li>
+          <li class="fingerHover" onclick="window.location.href='/info'">Info</li>
+          <li class="fingerHover" onclick="window.location.href='/about'">About</li>
+        </ul>
+      </div>
+    </div>
+
+    {% block body %}{% endblock %}
+  </body>
 </html>
