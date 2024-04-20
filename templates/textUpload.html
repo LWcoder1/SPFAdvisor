@@ -5,17 +5,14 @@
 {% block body %}
 
 <div class="formWrapper">
-    <div class="uploadDiv">
+        <h1> Text Upload </h1>
         <div class="mainUploadDiv">
-
-            <form method="POST" action="/addItem">
-                <label for="addText" id="addText">Add text area</label>
-                <input type="text" name="addText">
+            <form method="POST" action="/addItem" class="textForm">
+                <label for="addText" id="addText">Enter Sunscreen Ingredients Below</label>
+                <textarea placeholder="Enter Sunscreen Ingredients" rows="30" cols="100"></textarea>
                 <button>Submit</button>
             </form>
 
         </div>
-
-    </div>
 </div>
 {% endblock %}

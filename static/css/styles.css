@@ -208,6 +208,14 @@ p {
     background-size: cover;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20vh;
+    gap: 5vh;
+}
+
+.formWrapper h1 {
+    color: #F5F5DC;
 }
 
 .form {
@@ -225,12 +233,6 @@ p {
 
 .addIngredientButton:hover {
     background: green;
-}
-
-.uploadDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .optionSwitch {
@@ -255,7 +257,6 @@ p {
     background-color: white;
 }
 
-
 .mainUploadDiv {
     height: 80vh;
     width: 70vw;
@@ -264,4 +265,22 @@ p {
 
 div.currSwitch {
     background-color: white;
+}
+
+.textForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    padding: 25px;
+}
+
+.textForm label {
+    font-size: 24px;
+}
+
+.textForm button {
+    width: 25vw;
+    height: 5vh;
 }
