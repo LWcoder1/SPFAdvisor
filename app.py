@@ -52,6 +52,7 @@ def uploadImage():
 
     apple = imageScanner.pyScan(f"uploads/{filename}")
     if apple is not None:
+        print(apple)
         return render_template("results.html", possibleOffenderList=susIngredients.matchPotentialOffenders(apple))
     else:
         return render_template("form.html", form=form, file_url=file_url)
@@ -80,33 +81,7 @@ def textUpload():
 def info():
     return render_template("info.html")
 
-
-
-# @app.route('/planner', methods=['GET', 'POST'])
-# def planner():
-#     if request.method == 'POST':
-#         location = request.form['location']
-#         ll = returnCoordinates(location)
-#         radius = int(request.form['radius'])
-#         days = int(request.form['totalDays'])
-#         travelPlans = travelPlan(ll, radius, days)
-#         travelPlans.dataPopulate()
-#         totalDays = []
-#         for day in range(days):
-#             totalDays.append(day)
-#         # we need for loop to solve this
-#         # We need to do this for each additional div and change the lunch list
-#         # (Basically use something like make it visible to make it work)
-#         return render_template("itinerary.html",
-#                                duration=totalDays,
-#                                breakfastList=travelPlans.breakfastList,
-#                                lunchList=travelPlans.lunchList,
-#                                dinnerList=travelPlans.dinnerList,
-#                                attractionsList=travelPlans.attractionList,
-#                                parseString=parseObjectToString,
-#                                )
-#     else:
-#         return render_template("planner.html")
+# Active Ingredients: Avobenzone 3%, Octisalate 5%, Octocrylene 10%, Inactive Ingredients: Water, Glycerin, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Cetearyl Alcohol, Propanediol, Glyceryl Stearate Citrate, Cocoglycerides, Isododecane, Cetyl Esters, Cetyl Phosphate, Diisopropyl Sebacate, Isodecyl Neopentanoate, Lauryl Lactate, Arginine, 1,2-Hexanediol, Caprylyl Glycol, Hydroxyacetophenone, Polymethylsilsesquioxane, Raphanus Sativus (Radish) Seed Oil, Diethylhexyl Syringylidenemalonate, Helianthus Annuus (Sunflower) Seed Wax, Limnanthes Alba (Meadowfoam) Seed Oil, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Chlorphenesin, Xanthan Gum, Trisodium Ethylenediamine Disuccinate, Argania Spinosa Kernel Oil, Caprylic/Capric Triglyceride, Citrus Nobilis (Mandarin Orange) Peel Oil, Plantago Lanceolata Leaf Extract, Glycine Soja (Soybean) Oil, Tocopherol, Cymbopogon Schoenanthus Oil, Hippophae Rhamnoides Fruit Oil, Elettaria Cardamomum Seed Oil, Eugenia Caryophyllus (Clove) Leaf Oil, Cinnamomum Cassia Leaf Oil, Vanillin, Eucalyptus Globulus Leaf Oil, Lavandula Hybrida Grosso Herb Oil
 
 if __name__ == "__main__":
     app.run(debug=True)
