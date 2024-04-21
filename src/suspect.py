@@ -32,7 +32,7 @@ class suspectedIngredient:
         potentialOffenders = {}
         for item in range(len(comparedList)):
             for key, value in self.possibleOffenders.items():
-                if key in comparedList[item]:
+                if key.lower() in comparedList[item].lower():
                     potentialOffenders[key] = value
 
         return potentialOffenders

@@ -7,15 +7,15 @@
 <div class="formWrapper">
     <div class="uploadDiv">
         <div class="mainUploadDiv">
-
-            <form method="POST" action="/addItem">
-                <label for="addText" id="addText">Add text area</label>
-                <input type="text" name="addText">
-                <button>Submit</button>
+            <h1 class="imageUploadH1">Text Upload</h1>
+            <form method="POST" action="/addItem" class="formflex">
+                <label for="addText" id="addText"></label>
+                <textarea type="text" name="addText" class="textarea"></textarea>
+                <button class="coolButton">Submit</button>
             </form>
 
         </div>
-
     </div>
 </div>
+
 {% endblock %}

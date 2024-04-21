@@ -1,7 +1,58 @@
 {% extends 'base.html' %}
 
 {% block head %}
+
+{% endblock %}
+
+{% block body %}
+<!--    I want to implement the name of products which will search the web for an image (This will better orgamize the site)-->
+
+<div class="formWrapper">
+    <div class="uploadDiv">
+
+        <div class="mainUploadDiv">
+
+            <h1 class="imageUploadH1">Image Upload</h1>
+
+            <div class="mainUploadDivInside">
+                <img src="/static/uploads/CC58C9BC-9ADF-452D-ADDF-14810B9EAA48.png" rel="logo" id="uploadLogo">
+                <h1>Press / Drag and drop files</h1>
+                <p>Supported formats: PNG, JPEG</p>
+            </div>
+
+            <div class="uploadImage">
+                <form method="post" enctype="multipart/form-data" id="upload_form">
+                    {{ form.hidden_tag() }}
+                    {% for error in form.photo.errors %}
+                        <span style="color: red">{{ error }}</span>
+                    {% endfor %}
+                    <input type="file" name="photo" class="form-control" id="file_input">
+                    <div id="file_info"></div>
+                    {{form.submit(class="btn btn-success coolButton")}}
+                </form>
+            </div>
+
+            </div>
+
+            </div>
+
+
+    </div>
+</div>
+
     <script defer>
+        const fileInput = document.getElementById('file_input');
+        const fileInfo = document.getElementById('file_info');
+
+        fileInput.addEventListener('change', function() {
+            const file = fileInput.files[0]; // Get the first file selected
+            if (file) {
+                fileInfo.textContent = 'File: ' + file.name + ' (' + file.size + ' bytes)';
+            } else {
+                fileInfo.textContent = 'No file chosen';
+            }
+        });
+
         function bruh() {
             let apple = document.querySelector("#textAreaString")
             console.log(apple);
@@ -24,6 +75,7 @@
 
         }
 
+
         function toggleInputSwitch() {
             const imageSwitch = document.querySelector(".imageSwitch")
             const inputSwitch = document.querySelector(".inputSwitch")
@@ -41,41 +93,5 @@
         }
 
     </script>
-{% endblock %}
-
-{% block body %}
-<!--    I want to implement the name of products which will search the web for an image (This will better orgamize the site)-->
-
-<div class="formWrapper">
-    <div class="uploadDiv">
-
-        <div class="mainUploadDiv">
-
-            <div class="uploadImage">
-                <form method="post" enctype="multipart/form-data">
-                {{form.hidden_tag()}}
-
-                {% for error in form.photo.errors %}
-                  <span style="color: red">{{ error }}}</span>
-                {% endfor %}
-
-                <div class="row justify-content-center">
-                  <div class="col-auto"></div>
-                    {{form.photo(class="form-control")}}
-                    {{filename}}
-                </div>
-                  <div class="col-auto">
-                    {{form.submit(class="btn btn-success")}}
-                  </div>
-
-
-
-                </form>
-            </div>
-
-
-    </div>
-</div>
-
 
 {% endblock %}

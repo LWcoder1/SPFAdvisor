@@ -230,7 +230,7 @@ p {
 .uploadDiv {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 5vh;
 }
 
 .optionSwitch {
@@ -257,9 +257,26 @@ p {
 
 
 .mainUploadDiv {
-    height: 80vh;
-    width: 70vw;
-    background-color: white;
+    width: 700px;
+    background-color: #F5F5DC;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mainUploadDivInside {
+    height: 400px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    background-color: #AED6F1;
+    border: 5px dotted #00008B;
+    border-radius: 15px;
+    flex-direction: column;
+
 }
 
 div.currSwitch {
@@ -298,4 +315,68 @@ div.currSwitch {
     width: 100%;
     font-size: 18px;
     text-align: left;
+}
+
+#uploadLogo {
+    margin-top: 5vh;
+    height: 180px;
+    width: 160px;
+
+}
+
+.coolButton {
+    width: 120px;
+    font-size: 15px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: #00008B;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.coolButton:hover {
+    width: 120px;
+    font-size: 15px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: teal;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.imageUploadH1 {
+    margin-top: 10px;
+}
+
+.form-control {
+    position: absolute;
+    top: 25vh;
+    right: 25vw;
+    background-color: red;
+    height: 50vh;
+    width: 50vw;
+    opacity: 0%;
+}
+
+#upload_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea {
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
 }
